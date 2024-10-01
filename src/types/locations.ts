@@ -1,10 +1,10 @@
 export type Location = {
-  id: number
+  id: number | null
   name: string
   description: string
   country: string
   climate: string
   currency: string
-  latitude: number
-  longitude: number
+  latitude: number | null
+  longitude: number | null
 }
