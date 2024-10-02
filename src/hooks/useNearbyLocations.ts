@@ -4,7 +4,7 @@ import type { Location } from '../types/locations'
 
 export function useNearbyLocations(location: Location) {
   const { data, error, isLoading } = useQuery<Location[], Error>({
-    queryKey: ['nearbyLocations', location],
+    queryKey: ['nearbyLocations', location.id],
     queryFn: () => fetchNearbyLocations(location),
     enabled: !!location.id,
   })
