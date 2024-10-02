@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { type PayloadAction, createSlice } from '@reduxjs/toolkit'
 import type { Location } from '../../types/locations'
 
 const locationInitialState = {
@@ -18,7 +18,7 @@ const locationSlices = createSlice({
   name: 'location',
   initialState,
   reducers: {
-    selectLocation: (_, action) => {
+    selectLocation: (_, action: PayloadAction<Location>) => {
       return action.payload
     },
   },
