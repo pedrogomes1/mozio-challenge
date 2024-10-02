@@ -1,5 +1,5 @@
 import { useAppSelector } from './app/hooks'
-import { CurrentLocation } from './components/current-Location'
+import { CurrentLocation } from './components/current-location'
 import { Finder } from './components/finder'
 import { NearbyLocations } from './components/nearby-locations'
 
