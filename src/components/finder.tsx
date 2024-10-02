@@ -65,6 +65,10 @@ export function Finder() {
               ...baseStyles,
               minHeight: '45px',
             }),
+            noOptionsMessage: baseStyles => ({
+              ...baseStyles,
+              ...(error?.message && { color: 'red' }),
+            }),
           }}
         />
       </div>
