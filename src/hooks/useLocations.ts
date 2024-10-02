@@ -6,7 +6,7 @@ const STALE_TIME_IN_MILLISECONDS = 25000
 
 export function useLocations(inputSearch: string) {
   const { data, error, isLoading } = useQuery<Location[], Error>({
-    queryKey: ['fakeData', inputSearch],
+    queryKey: ['locations', inputSearch],
     queryFn: () => fetchLocations(inputSearch),
     enabled: !!inputSearch.length,
     retry: false,
