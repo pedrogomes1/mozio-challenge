@@ -23,13 +23,15 @@ export function NearbyLocations() {
 
   return (
     <div>
-      <h1 className="mt-10 mb-5 text-3xl font-normal">Nearby Locations</h1>
+      <h1 className="mt-10 mb-5 text-3xl font-normal max-sm:text-2xl">
+        Nearby Locations
+      </h1>
       <ul className="flex gap-2 flex-wrap">
         {nearbyLocations?.map(location => (
           <li key={location.id} className="min-w-fit">
             <button
               type="button"
-              className="bg-violet-700 p-3 rounded-lg text-white uppercase transition-opacity opacity-90 hover:opacity-100"
+              className="bg-violet-700 p-3 rounded-lg text-white uppercase transition-opacity opacity-90 hover:opacity-100 max-sm:text-sm"
               onClick={() => handleSelectNearbyLocation(location)}
             >
               {location.name}

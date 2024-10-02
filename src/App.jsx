@@ -8,7 +8,7 @@ function App() {
   const hasLocationSelected = location.id
 
   return (
-    <main className="flex flex-col min-h-screen justify-center w-[600px] mx-auto">
+    <main className="flex flex-col min-h-screen justify-center w-[650px] mx-auto max-sm:w-auto max-sm:mx-8 max-sm:py-8">
       <Finder />
       {hasLocationSelected && (
         <>
