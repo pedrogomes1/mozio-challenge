@@ -5,12 +5,17 @@ import { NearbyLocations } from './components/nearby-locations'
 
 function App() {
   const location = useAppSelector(state => state.location)
+  const hasLocationSelected = location.id
 
   return (
     <main className="flex flex-col min-h-screen justify-center w-[600px] mx-auto">
       <Finder />
-      {location.name && <CurrentLocation />}
-      <NearbyLocations />
+      {hasLocationSelected && (
+        <>
+          <CurrentLocation />
+          <NearbyLocations />
+        </>
+      )}
     </main>
   )
 }
