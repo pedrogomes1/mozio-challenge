@@ -7,6 +7,8 @@ const FETCH_DELAY_IN_MILLISECONDS = 2000
 export const fetchNearbyLocations = (
   location: Location
 ): Promise<Location[]> => {
+  console.log('fetchNearbyLocations args (location)', location)
+
   return new Promise(resolve => {
     setTimeout(() => {
       const nearbyLocations = findClosest(locations, location)

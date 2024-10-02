@@ -4,6 +4,8 @@ import { locations } from './fake-data'
 const FETCH_DELAY_IN_MILLISECONDS = 2000
 
 export const fetchLocations = (inputValue: string): Promise<Location[]> => {
+  console.log('fetchLocations args (inputValue)', inputValue)
+
   const input = inputValue.toLowerCase()
 
   return new Promise((resolve, reject) => {
