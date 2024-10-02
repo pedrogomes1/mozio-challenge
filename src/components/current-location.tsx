@@ -1,5 +1,4 @@
 import { useAppSelector } from '../app/hooks'
-import { NearbyLocations } from './nearby-locations'
 
 export function CurrentLocation() {
   const location = useAppSelector(state => state.location)
@@ -22,7 +21,6 @@ export function CurrentLocation() {
           </li>
         ))}
       </ul>
-      <NearbyLocations />
     </section>
   )
 }
