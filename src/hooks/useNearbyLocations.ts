@@ -1,13 +1,13 @@
 import { useQuery } from '@tanstack/react-query'
-import { fetchNearbyLocations } from '../api'
+import { fetchNearbyLocations } from '../api/get-nearby-locations'
 import type { Location } from '../types/locations'
 
 export function useNearbyLocations(location: Location) {
   const { data, error, isLoading } = useQuery<Location[], Error>({
-    queryKey: ['nearbyLocations'],
+    queryKey: ['nearbyLocations', location],
     queryFn: () => fetchNearbyLocations(location),
     enabled: !!location.id,
   })
 
-  return { data, error, isLoading }
+  return { nearbyLocations: data, error, isLoading }
 }
